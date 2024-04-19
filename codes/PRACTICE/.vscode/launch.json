@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "maximum_sum_in_an_array",
+            "request": "launch",
+            "mainClass": "maximum_sum_in_an_array",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "array1",
+            "request": "launch",
+            "mainClass": "array1",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "find_min_in_array",
+            "request": "launch",
+            "mainClass": "find_min_in_array",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "min_max_low_comparision",
+            "request": "launch",
+            "mainClass": "min_max_low_comparision",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "move_zeroes_end",
+            "request": "launch",
+            "mainClass": "move_zeroes_end",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "relational_operator",
+            "request": "launch",
+            "mainClass": "relational_operator",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "remove_even_integers_array",
+            "request": "launch",
+            "mainClass": "remove_even_integers_array",
+            "projectName": "PRACTICE_88f55b18"
+        },
+        {
+            "type": "java",
+            "name": "reverse_array",
+            "request": "launch",
+            "mainClass": "reverse_array",
+            "projectName": "PRACTICE_88f55b18"
+        }
+    ]
+}

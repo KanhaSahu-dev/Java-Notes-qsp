@@ -1,0 +1,89 @@
+Identification of static membes from to top to bottom. In that identification j will also be identifed then j will assigned as 0 as it's a static variable.
+
+Execution of static variable assignment & static blocks from top to bottom.
+
+Execution of main method.
+
+
+
+class a{
+    static int i = 10;
+    static {
+        m1();
+        sopln("fsb");
+    }
+
+    p s v m(){
+        m1();
+        sopln("main");
+    }
+
+    p s v m1(){
+        sopln(j);
+    }
+    static {
+        sopln("ssb");
+    }
+    static int j = 20;
+}
+
+output :- 0 fsb ssb 20 main
+
+Instace or Non Static  Block
+--------------------------
+Instance block is a block which will be executed whenever we create an object.
+It will be called as many times as you create the object.
+If we have more than one instance block in a class then instance block will be executed from top to bottom.
+e.g.,
+{
+sopln("hii");
+}
+
+If we have constructors and instance block then instance block is executed first then the constructor.
+
+All every non static blocks or methods or variales can only be called or executed with the help of object.
+
+class a{
+int i = 10;
+{
+m1();
+sopln("const");
+}
+psvm(){
+a a1 = new a();
+sopln("main");
+a a2  = new a();
+}
+public void m1(){
+sopln(j);
+}
+{
+sopln("sib");
+}
+int j =20
+}
+
+
+
+class a{
+static {
+sopln("fsb");
+}
+{
+sopln("fib");
+}
+A(){
+sopln("const");
+}
+psvm(){
+a a1 = new a();
+sopln("main");
+a a2 = new a();
+}
+static {
+sopln("ssb");
+}
+{
+sopln("sib");
+}
+}

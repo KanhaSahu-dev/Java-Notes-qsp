@@ -1,0 +1,41 @@
+Legacy classes
+---------------
+Legacy classes are those classes which are created in 1.0 version and these classes are the implemented classes in the 1.2 version.
+
+Methods of Vector
+-----------------
+1. to add elements
+    *addElements(Object o);
+2. to remove Objecct:-
+    *removeElement(Object o);
+    *removeElementAt(int index);
+    *removeAllElements();
+3. to get Object:-
+    *elementAt(int index);
+    *firstElement();
+    *lastElement();
+4.Other method:-
+    *size();
+    *capacity();
+    *Enumeration elements();
+
+Stack:-
+-------
+1.It is the child class of Vector.
+2.Whenever we want to go for LIFO(Last In First Out) order execution then we will go for Stack class.
+
+Constructor:-
+-------------
+1.Stack s = new Stack();
+Methods:-
+---------
+1.Object push(Object o);
+    *to add object in the Stack.
+2.Object pop();
+    *This method will be used to remove the top most object from the stack.
+3.Object peek();
+    *This method will return the top most element from the stack without removing.
+4.boolean empty();
+    *This method will return true if the Stack is empty otherwise false.
+5.int search(Object o);
+    *This method will return the offset of the element if available otherwise it will return -1.

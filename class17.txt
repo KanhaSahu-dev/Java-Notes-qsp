@@ -1,0 +1,33 @@
+Static
+-----
+It is a non access modifier which is applicable for methods and variables only.
+
+Method Hiding
+--------------
+Whenever we are declaring static method in the child class which is already present in the parent class 
+where we will keep the method declaration same but by changing the implementation is known as the process of Method hiding.
+
+In method hiding the method resolution takes place on the basis of object reference side and compiler is responsible for the method resolution .
+It is otherwise known as compile time polymorphism
+
+class Tommy{
+public static void m1(){
+	System.out.prinln("Hii");
+}
+
+}
+public class VDY extends Tommy{
+	public static void m1(){
+		System.out.println("Hello");	
+	}
+	public static void main(String... a){
+		Tommy m = new Tommy();
+		m.m1();
+		VDY y=new VDY();
+		y.m1();
+		Tommy y1=new VDY();
+		y1.m1();	
+	}
+}
+
+

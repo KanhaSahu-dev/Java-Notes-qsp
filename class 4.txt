@@ -1,0 +1,39 @@
+Assignment Operator(=)
+
+It is used to assign values to variables
+There are three types of assignment operator
+
+1. Simple assignment operator
+int x = 10;
+2.Chained assignment operator
+int a = b = c = d = 10;
+3.Compound Assignment operator
+int x = 10;
+x += 20; // 30
+
+d = 10 c = 200 b = -180 a = -160
+
+b++ <-> b+=1 <-> b=(byte)(b+1);
+e.g., byte b = 10;
+b+=1;
+sopl(b); // 11
+
+Equality Operator = Double Equal Operator
+It is applicabe for all types of primitive variables including boolean .
+
+sopln(10 == 20); // false
+sopln('a' == 97.0); // true
+sopln(false == false); // true
+
+Equality operator is applicable for non primitive data types.
+The number given by the heap manager is converted to hexadecimal and is stored in the object reference which is then recognised by the jvm.
+
+For two object references r1 and r2 r1 ==  r2 returns true if both references are pointing towards same object and r1 == r2 returns false if both references are pointing towards different objects.
+t1 is an reference of an object
+t1 == null will be false.
+
+All non primitive variables can only store 2 types of values one is the object and another is null.
+
+Bitwise Operator
+&& || ^
+xor returns true in case iff both are different.

@@ -1,0 +1,2 @@
+Array Initialisation are of two types :-
+

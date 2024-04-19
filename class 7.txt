@@ -1,0 +1,29 @@
+UPDATION
+---------
+
+All the three parts of for loop are optional and independent of each other .  
+
+for(int i =0; i<3; sopln("hey");){ sopln("hii"); i++;} 
+write a program to print from 0 to 10 . 
+
+for (int i = 0;i<=10;i++)
+sopln(i);
+
+write a program to find the sum of two numbers .
+
+SCANNER
+---------
+
+Whenever we want input from the user then we should go for the scanner class . This is class is present in java.util package. 
+
+integer input -> nexInt(),nextByte(),nextShort(),nextLong();
+decimal input -> nextFloat(), nextDouble;
+boolean input -> nextBoolean();
+String input-> next(),nextLine();
+char input -> nextLine().charAt(0);
+
+write a program to find all the even and odd numbers from 0 to n numbers .
+write a program to find the sum of all the even and odd numbers from 0 to n .
+write a program to check whether a number is prime or not.
+write a program to display all the prime numbers from 0 to n numbers.
+wrtie a program to find the sum of all prime numbers from 0 to n.

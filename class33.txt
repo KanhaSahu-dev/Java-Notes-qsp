@@ -1,0 +1,35 @@
+toCharArray()
+--------------
+
+package com.aaa;
+public class Test implements Cloneable{
+    int i=10;
+    public static void main(String args[]){
+        String s = "abcdefghi";
+        char[] ch = s.toCharArray();
+    }
+}
+
+For each in java & split()
+---------------------------
+
+for(char x:ch){
+            System.out.println(x);
+        }
+
+
+Split method is used to convert any String into substring on the basis of some separator 
+Its return type is String []
+
+public static void main(String args[]){
+        String s = "hey it's raining";
+        System.out.println(s);
+        String[] a = s.split(" ");
+        for(String x:a)
+        System.out.println(x);
+    }
+
+Q: Write a program to find the number of characters present inside a String without using length() method.
+Q: Write a program to find the number of words present inside a string.
+Q: Write a program print the words of a string which is of even length.
+Q: Write a program to count the no. of characters  present in each word of a string.

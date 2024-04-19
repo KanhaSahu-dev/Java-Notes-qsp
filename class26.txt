@@ -1,0 +1,81 @@
+Only check runtime object at the time of overriding .			       
+In all other cases it will check the reference time object.
+
+A parent class and b is a object reference of the child class.
+((A)b).m1();	means b is converted to the type of A . So case of upcasting.
+			e.g., A b = new B();
+
+
+No matter how many times type casting is done at the time of overriding it always checks the runtime object.
+
+At the time of method hiding the calling member e.g., method or variables are resolved by the reference .
+Method Hiding is the process where methods are static and are overriden.
+
+Overriding and all it's processes and concepts are only applicable for methods not any thing like variable
+
+class A{
+int x = 666;
+}
+class B extends A{
+int x = 777;
+}
+class C extends B{
+int x = 888;
+C o = new C();
+o.x;//888
+B(o).x;//777
+A(B(o)).x;//666
+}
+
+
+Data Hiding
+-----------
+Hiding are our internal data in such a way that outside person should not access it this is known as data hiding.
+Main advantage of data hiding is security .
+
+We can achieve data hiding by declaring the variables as private.
+e.g.,
+private int x = 10;
+We can access private members or private variables outside the class with the help of getter or setter methods.
+
+Getter method is used to get the value of a private variable and it is also known as accessor method
+Recommeded way:-
+suppose we need a data hiding on a variable we need to declare
+class test{
+private double salary;
+getSalary(){}
+}
+
+Setter method is used to  set the value of a private variable and it is also known as mutator method.
+
+setSalary(){}
+
+Abstraction
+-----------
+Hiding our internal implementation and providing functionality to the user is known as abstraction.
+
+How we are going to achieve abstraction?
+We can achieve abstraction with the help of abstract class and interface.
+We have to 
+Use cases or advantages of abstraction:-
+Easy to use
+Security
+
+Encapsulation
+-------------
+Wrapping or binding of data and the corresponding function in a single unit is known as Encapsulation.
+Every java classes containing variables and methods are encapsulated class.
+
+Tightly Encapsulated class,Loosely Encapsulated class.
+
+Mock upto Abstraction.
+
+
+
+
+
+
+
+
+
+

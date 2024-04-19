@@ -1,0 +1,17 @@
+Explicit Type casting
+-------------------
+int x = 10;
+byte b = (byte)x;
+sopln(b); // 10.
+
+Only for explicit primitive datatype
+--------------------------------
+
+Programmer is responsible explicit type casting.
+Whenever we are assigning a bigger data type value to a smaller data type variable explicit type casting willl be performed.
+Explicit type casting is also known as downcasting or narrowing .
+There may be some loss of information.
+
+After conversion from int 130 to byte then the result will be -126 as it follows a cycle.
+
+ 

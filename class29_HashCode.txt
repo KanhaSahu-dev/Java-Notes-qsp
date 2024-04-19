@@ -1,0 +1,100 @@
+HashCode
+----------
+A unique number is generated for each and every object by jvm that number is known as HashCode().
+public int hashCode(){
+    
+}
+
+public class Test{
+    public static void main(String[] args){
+        Test t1=new Test();
+        System.out.println(t1.hashCode);
+
+        Test t2=new Test();
+        int hashcode=t2.hashCode();
+        System.out.println(hashcode);
+    }
+}
+
+Uses:-
+------
+It is used for Searching operation 
+We can generate our own hashcode by overriding hashCode() in our class.
+
+Equals method()
+---------------
+It is used to compare the objects.
+When we use equals method it is used to compare the reference as well as content of the object.
+
+Whenever we use equals and we dont have any equals method inside the Student class then at that time it goes to the Object class and it compares the reference.
+Syntax
+------
+public boolean equals(Object o){
+    return boolean;
+}
+
+package com.abc;
+public class Student{
+    String name;
+    Student(String name){
+        this.name=name;
+    }
+    public static void main(String args[]){
+        Student s1 = new Student("abc");
+        Student s2 = new Student("abc");
+    }   
+}
+
+If we want to compare the content of the objecs then we need to override equals()
+
+Object 
+
+class yo{
+    String name;
+    yo(String name){
+        this.name=name;
+    }
+    public boolean equals(Object o){
+        String name1 = this.name;
+        yo s = (yo)o;
+        String name2 = s.name;
+        if(name1.equals(name2))
+            return true;
+        else
+            return false;
+        }
+    
+    public static void main(String[] args) {
+        yo s1= new yo("abc");
+        yo s2 = new yo("abc");
+    }
+}
+
+class yo{
+    String name;
+    yo(String name){
+        this.name=name;
+    }
+
+
+Question:I cant understand why when i am passing a string (o.name) then it gets successfully passed but in case of an integer suppose i had a non static integer ?
+Answer: It is simple bcoz if u have a non primitive as it's argument then a non primitive should be passed to it not a primitive type.
+
+
+Question: From this line, "return this.name.equals(o.name);" a question arises why it is not infinite loop , it is because here "return this.name.equals(o.name);" equals calls the equals in the Object class basically the equals method is overloaded not overrided.
+
+
+    public boolean equals(yo o){
+        return this.name.equals(o.name);
+    }
+    public static void main(String[] args) {
+        yo s1= new yo("abc");
+        yo s2 = new yo("abc");
+        System.out.println(s1.equals(s2));
+    }
+}
+
+As we know about the camelCase thingy similarly we have the PascalCase mainly it is used to write the compound names for the classes and interface.
+
+Here the first letter is capital.
+

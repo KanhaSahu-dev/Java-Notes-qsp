@@ -1,0 +1,89 @@
+Overriding happens based on the requirement of the child class.
+
+
+It is recommended to start the package name with com. or org. 
+
+Protected modifier
+-----------------
+If a method is declared as protected then we can access that method within a class, outside a class, within same package as well as outside the package but only in child class.
+
+
+Protected methods can only be called within the child class.
+We cant access with the help of parent class object.
+
+package jsr;
+import Bbsr.A;
+class B{
+p s v m(...){
+A a = new A();
+a.m1();//CE
+
+B b = new B();
+b.m1();//Uimaa
+}
+}
+
+Defualt
+------
+
+If a method is defualt we  can only acess within same package but not outside the package.
+
+Private
+-------
+
+If a method is declared as private then we can access that method within a class but not outside a class.
+
+Scope of method
+----------------
+-----  Highiest to lowest ---->
+public > protected > default > private
+
+When overriding the access modifier the scope of the parent's access modifier while coming to the child's access modifier should increase not decrease.
+
+p.c. method modifier --> public 	protected 			default 					private
+
+c.c. method modifier --> public     (public ,protected) 	(public protected default)	cannot be overriden.
+
+Non access Modifier
+
+final
+----
+It is a modifier which is applicable for variables , methods and classes .
+
+final variable
+-------------
+If a variable be declared as final then it's value cant be changed.
+e.g.,
+class a{
+static final int x = 10;
+psvm(){
+x=20;//error final value cant be changed
+}
+}
+
+final method
+------------
+If a method is declared as final then it cannot be overriden because it's implementation is fixed.
+e.g.,
+class Parent{
+public final void marry(){}
+}
+class child extends Parent{
+public void marry(){}// error
+}
+
+final class
+----------
+If a class is declared as final then it cannot be inherited that is we can create the child class of that class.
+e.g.,
+final class Demo{
+}
+class child extends Demo{
+}// error cannot inherit the final class.
+
+All the methods present inside the final class are by default final.
+All the variables present inside the final class are not mandatory to be final.
+
+
+
+

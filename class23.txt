@@ -1,0 +1,25 @@
+We can create constructor in every java class including abstract class but not inside interface .
+
+As the variables inside the interface is by default final so it is initialised at the time of it's declaration and when we try to reinitialise the variable inside the interface we cant do that . In this case in abstract class we can easily do that as abstract class variables are not final.
+
+Static control flow 
+-----------------
+Static block
+-----------
+Static block is a block which will be executed automatically before the execution of the main method 
+
+class a{
+static {
+sopln("static block");
+}
+p s v m(){
+sopln("main method");
+}
+}
+
+**If in a class we have more than one static block then the execution order will be in from top to bottom.
+
+
+Can we print any statement to the console without using main method.
+
+

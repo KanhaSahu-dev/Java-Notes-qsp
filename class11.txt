@@ -1,0 +1,31 @@
+Printing the return value of a method
+----------------------------------
+We can print return the value of method in the following ways
+1) by storing in a variable
+
+int x = m1();
+
+2) Directly
+---------
+sopln(m1());
+
+the type of return type determines the type of return statement.
+
+If a method has non primitive return type then it can return null or object of that  type.
+
+public static Test m1(){
+sopln("m1-method");
+return new Test();
+}
+
+After return statement we cannot print any other statement 
+
+Methods in signature
+-------------------
+Method signature consists of method name and the argument's data type.
+Two methods with the same signature within a class is not allowed in java.
+
+
+
+
+

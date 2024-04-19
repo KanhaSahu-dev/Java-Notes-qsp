@@ -1,0 +1,25 @@
+Encapsulation is the combination of abstraction and data hiding.
+
+class Test{
+private int id;
+public void setId(int id1){
+this.id=id1;
+}
+public int getId(){
+return id;
+}
+psvm(){
+Test o = new Test();
+o.setId(10);
+sopln(getId());
+}
+
+}
+
+class hello{
+psvm(){
+Test o = new Test();
+o.setId(10);
+sopln(getId());
+}
+}

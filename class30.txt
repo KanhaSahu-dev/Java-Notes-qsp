@@ -1,0 +1,85 @@
+Finalization
+============
+
+
+finalize() // The most easiest topic acc. to sir LoL.
+-----------
+It is used to deallocate or to perform the cleanup activites not the main thing is to destroy.
+It is a method which is called by a garbage collector to destroy useless objects
+An object without any reference is known as useless object/garbage object.
+
+
+Ways to make an object useless
+------------------------------
+The moment the the object loses it's reference then the object can be called as useless object
+We can do that by assigning the null to the reference variable
+
+1.
+If an object is no longer required then assign null to it's reference variale then that object will become useless... this process is known as nullifying the reference variable.
+
+Test t1 = new Test();
+Test t2 = new Test();
+
+t1 = null;//Object becomes useless object.
+t2 = null;//Object becomes useless object.
+
+2.Reassigning the reference variable
+If an object is no longer required then assign a new object to it's reference variable then the old object will become useless ...Reassigning the reference variable.
+
+Test t1 = new Test();
+Test t2 = new Test();
+t1 = new Test();//1 object is eligible for GC.
+t2 = t1;//2 objects are eligible for GC.
+
+Object created inside the method.
+---------------------------------
+Q. 
+class Test {
+    public static void main(String args[]){
+        m1();//2 objects are eligible for GC.
+    }
+    public static void m1(){
+        Test t1=new Test();
+        Test t2=new Test();
+    }
+}
+
+Island of Isolation
+--------------------
+class Test{
+    Test i;
+    public static void main(String[] args){
+        Test t1=new Test();
+        Test t2=new Test();
+        Test t3=new Test();
+    }
+}
+
+When an object is useless then jvm is called which calls the garbage collector , garbage collector asks last wish , if some data base and n/w base is connected , then it is first deconnected by the GC.
+
+class Test{
+    public static void main(String args[]){
+        Test t = new Test();
+        t=null;
+        System.gc();//Called jvm GC came.
+        //Even when we dont call the finalize method the GC is automatically called by the jvm.
+        //GC is called which calls finalise.
+    }
+        public void finalize(){
+            System.out.println("finalize method called");
+        }
+}
+
+Whenever we call the main method a main thread is created,in java whatever is executed it is done by the thread.
+
+Garbage collector is another thread.
+
+If we have more than one thread in one program then the order in which the output is shown is not determined.
+
+If a child thread is in the parent thread then we have the same priority.
+
+Garbage collector's main work is to call the finalize method.
+
+If we call finalise() method on a particular class object then the corresponsing class finalize method will be executed.
+
+String class finalize() has empty implementation.

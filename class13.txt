@@ -1,0 +1,53 @@
+public static void m1(int x,double d){...}
+
+public static void m1(double d,int x){...}
+
+m1(10,10);// error since both methods will be called so error will be ambiguous.
+
+If there is relation between the (parent and child) class arguments then the priority given to the child class.
+
+public static void m1(String s){...}
+public static void m1(Object o){...}
+
+m1(null);// m1 String will be called and henceforth will be executed.
+
+null is not a string type.
+
+so when
+public static void m1(String s){...}
+public static void m1(class_name o){...}
+
+m1(null); // error because null does not belong to anyone.
+
+The priority always goes to the smallest child in a relationship no matter what .
+
+Var Arg Method
+---------------
+A method which can be called by passing any number of arguments is known as var arg method.
+
+public void m1(int... x){...} // var arg method
+
+We can call var arg method by passing any number of arguments including 0.
+
+The question arises how more than one values can be passed into the same argument that is x and still there is no error. Actually there is an internal conversion of 1 dimensional array is converted.
+
+Wherever there is one dimensional array it can be replaced with var arg but vice versa is not true.
+
+var arg method has the least priority no matter what.
+class Test{
+public static void main(String... args){
+
+m1(); // Bye
+m1(10,20,30); // Bye
+m1(10); // Hii
+}
+
+public static void m1(){}
+
+public static void m1(int... a){}
+
+
+
+}
+
+Can we overload main method?

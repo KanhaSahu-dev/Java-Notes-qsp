@@ -1,0 +1,123 @@
+Polymorphism
+------------
+poly --> many morph-->forms
+
+one name with many forms is known as Polymorphism.
+
+Polymorphism is of two types
+
+1.(Compile Time Polymorphism/EarlyBinding)
+    Static poly(Method Overloading/Method Hiding).
+2.(Runtime Polymorphism/Late Binding)
+    Method Overriding.
+
+java.lang package
+-----------------
+Object Class 
+methods of object class
+toString()
+hashcode
+equals()
+finalize()
+clone()
+
+Sting Class
+StringBuffer
+StringBuilder
+
+Wrapper Class
+
+AutoBoxing and Auto Unboxing
+
+
+OBJECT Class
+-->Every Package is imported except java.lang package bcoz by default it is available in all java classes.
+
+-->It is the super most class in java bcoz every class in java extends the object class directly or indirectly.
+
+-->Every class is a direct class of Object class if it doesnt extend any other class
+-->A class is said to be indirect child class of Object class if it extends another class.
+
+Methods of Object class
+=======================
+toString()
+hashCode()
+equals()
+getClass()
+wait()
+wait(long ms)
+wait(long ms,int ns)
+notify()
+notifyAll()
+
+
+Why Object is the supermost class in java?
+Bcoz we can access object's all methods in every other class' objects but the vice versa is not true.
+
+toString()
+----------
+It is used to convert any object to String.
+It gives the string representation of any object.
+
+Syntax:
+-------
+package com.abc;
+public class Test{
+    public static void main(String[] args){
+        Test t = new Test();
+        String s1 = t.toString();
+        System.out.println(s1);
+        System.out.println(t.toString());
+    }
+}
+Output
+------
+com.abc.Test@3fee733d
+com.abc.Test@3fee733d
+
+Whenever we try to print the object reference the toString() will be called automatically.
+package com.abc;
+public class Test{
+    public static void main(String[] args){
+        Test t = new Test();
+        String s1 = t.toString();
+        System.out.println(s1);
+        System.out.println(t.toString());
+    }
+}
+com.abc.Test@3fee733d
+
+A fully qualified name is that name which is consisted of package name and class name.
+Whenever object class toString method is called output will always in the form of address.
+
+
+
+A normal overlook of the toString() name
+----------------------------------------
+
+Object class toString()
+-----------------------
+package com.abc;
+public class Student{
+     String name;
+    Student(String name){
+        this.name = name;
+
+    }
+    public static void main(String[] a){
+        Student s1 = new Student("abc");
+        System.out.println(s1);
+    }
+}
+
+Whenever we want required output we need to override toString() in our class.
+
+toString() is only applied on the non-primitive types.
+
+e.g., int x = 1; x.toStirng() will be error.
+
+Revise co-variant concept.
+
+In String class, StringBuffer class, StringBuilder class, all Wrapper classes and Collection  classes , toString() is overidden to give the required output.
+
+The return of the toString() method's representation is packageName.className + @ HexCode(hashCode).

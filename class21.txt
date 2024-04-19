@@ -1,0 +1,89 @@
+class Student{
+    String name;
+    int id;
+    Student(String name,int id){
+        this.name = name;
+        this.id = id;
+    }
+
+    public static void main(String args[]){
+        Student s1 = new Student("abc",10);
+        Student s2 = new Student("xyz",20);
+        System.out.println(s1.name+" "+10);
+        System.out.println(s2.name+" "+20);
+    }
+}
+
+Copy Constructor
+----------------
+Creating an object from the existing object is known as copy constructor.
+e.g.,
+class Student{
+    String name;
+    int id;
+    Student(String name,int id){
+        this.name = name;
+        this.id = id;
+    }
+
+    Student(Student s){
+        this.name = s.name;
+        this.id = s.id;
+    }
+
+    public static void main(String args[]){
+        Student s1 = new Student("abc",10);
+        Student s2 = new Student(s1);
+        System.out.println(s1.name+" "+s1.id);
+        System.out.println(s2.name+" "+s2.id);
+    }
+}
+
+Factory Method
+---------------
+It is a method which is called by a class name and when called it should return the object of that class.
+
+e.g.,
+class Student1 {
+    public static void main(String[] args) {
+        Runtime r = Runtime.getRuntime();
+        Runtime r1 = Runtime.getRuntime();
+        if(r==r1){
+            System.out.println("true");
+        }
+    }
+}
+
+Well no matter how many times you create the object it refers to the same object.
+
+Singleton Class
+---------------
+For any java class if  we are allowed to create only one object then that class is said to be Sigleton class.
+
+e.g., Runtime class, ActionSevlet class.
+
+We can create our own sigleton class by using the following ways 
+1. by decalring constructor as private
+2. by using factory method
+
+e.g.,
+class Student1{
+    static Student1 t;
+    private Student1(){
+
+    }
+    public static Student1 getTest(){
+        if(t == null){
+            t = new Student1();
+        }
+        return t;
+    }
+
+    public static void main(String args[]){
+        Student1 t1 = Student1.getTest();
+        Student1 t2 = Student1.getTest();
+    }
+}
+
+
+

@@ -1,0 +1,62 @@
+if(true){sopln("hii"); //hii		if(false){sopln("hii");} //
+
+Else part is optional .
+if(true){sopln("oye");}
+sopln("bas");
+else{sopln("hoye");} // error 
+
+If we have only 1 statement inside if then no need to give curly braces.
+
+if(true)
+System.out.println("hii);
+
+If we are not providing any curly braces then only one statement is allowed and that statement should not be of declarative type.
+
+Switch
+
+switch(x){
+case 1:
+statement1;
+break;
+
+case 2:
+statement2;
+break;
+
+case 3:
+statement3;
+break;
+
+default:
+default statement;
+break;
+
+}
+
+
+Allowed Arguments are:- v1.7 { byte , short , int , char, Byte, Short, Integer, Character, Enum, String }.
+
+switch(x){
+case 10:
+sopln(10);
+break;
+
+case 20:
+sopln(20);
+break;
+
+default:
+sopln("def");
+break;
+}
+
+both case and default in the switches are optional.
+
+switch(x){} // correct
+
+If we are writing any statement inside the switch it has to be under some case or default.
+switch(x){ sopln("hello world");}
+
+Curly braces are mandatory for the switch	 . 
+Case label should be of constant expression.
+Case label should be in the range of the type of arguments.

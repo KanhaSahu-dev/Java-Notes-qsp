@@ -1,0 +1,95 @@
+Drawbacks of Arrays
+-------------------
+1.fixed in size
+2.It contains only homogenous elements
+3.No inbuilt functions to perform operations.
+
+To overcome this problems "Collection framework" came into picture.
+
+Advantages of Collection framework
+==================================
+"Growable" in nature
+It contains "heterogeneous" elements
+It has "inbuilt" functions.
+
+                                    Collection
+
+    List                               set                      Queue
+Arraylist LinkedList Vector    HashSet     Navigable set    PrioritySet  BlockingQueue
+                     Stack   LinkedHashSet   SortedSet                    PriorityBlockingQueue
+                                              TreeSet                     LinkedBlockingQueue
+
+Whenever we want to represent a group of individual objects as a single entity then we should go for collection.
+
+Methods of Collection interface
+-------------------------------
+1.boolean add(Object o)
+--->It is used to add elements-->It returns true if successfully added and return false if not added successfully.
+
+import java.util.*;
+
+public class class39 {
+    public static void main(String[] args) {
+        ArrayList l = new ArrayList();
+        l.add("aa");
+        l.add(10);
+        l.add(true);
+        System.out.println(l);
+    }
+}
+
+Output:-
+[aa, 10, true]
+
+2.boolean addAll(Collection c);
+--> It adds a group of elements at a time.
+
+3.boolean remove(Object o);
+-->remove the specified object. 
+
+4.boolean removeAll(Object o);
+-->remove the specified object.
+
+5.boolean retainAll(Object o);
+-->remove the specified object. 
+
+import java.util.ArrayList;
+
+public class class39 {
+    public static void main(String[] args) {
+        ArrayList l = new ArrayList();
+        l.add("aa");
+        l.add(10);
+        l.add(true);
+        System.out.println(l);
+
+        ArrayList l1 = new ArrayList();
+        l1.add(12);
+        l1.add("www");
+        l1.add(null);
+        l.addAll(l1);
+        System.out.println(l);
+        l.retainAll(l1);
+        System.out.println(l);
+    }
+}
+
+
+6. void clear();
+removes all elements
+
+7. boolean contains();
+checks if the element is present or not.
+
+8. boolean containsAll(Collection c);
+
+9. boolean isEmpty();
+checks whether empty or not
+
+10. int size();
+No elements present inside .
+
+11.Object[] toArray 
+converts it into array 
+
+12.Iterator iterator(); ---> cursor of Java.

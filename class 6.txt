@@ -1,0 +1,54 @@
+In switch case duplicate case is not allowed 
+int x =97;
+switch(x){
+case 97:
+sopln(97);
+break;
+case 'a':
+sopln(99);
+break;
+}
+output is compilation error.
+
+case label should be constant expression, case label should not be duplicate .
+
+DEFAULT
+--------
+
+It is optional, we can write default at most once.
+
+It is not mandatory to write the default case as the last case.
+	
+	-If any case matches from that case onwards all the statements will be executed untill break or end of 	switch.This is known as fall through inside switch.
+	e.g., switch(x){
+case 0:
+sopln(0);
+case 1:
+sopln(1);
+break;
+case 3:
+sopln(3);
+default:
+sopln("def"); // x = 0 is 0 and 1 , x = 1 is 1 and for x = 3 result is 3 and def.
+}
+
+LOOPING STATEMENT
+--------------------
+
+for :-
+
+When we know the exact number of iteration then we should go for loop .
+for(int i = 0; i<3; i++){
+sopln("hii");
+} // hii hii hii
+
+Initialisation part :- 
+
+This part is executed only once , int i = 0;String s = "abc"; will be wrong.
+We can declare any number of variables  in the initialisation part but it should be of same type .
+We can write printing statement in the initialisation part. (check code)
+
+Condition part:- 
+If we are not providing any condition in the condition part then compiler will always place true in the condition part.
+
+

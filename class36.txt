@@ -1,0 +1,85 @@
+Try with multiple catch block
+-----------------------------
+public static void main(String args[]){
+    try{
+        sopln(10/0);
+    }catch(AE e){
+        System.out.println("hii);
+    }
+    catch(exception ei){
+        System.out.println("bye");
+    }
+}
+
+try with Multiple catch block is allowed but order of catch block is important it should be from child to parent but not from parent to child.
+
+
+public static void main(String args[]){
+    try{
+        System.out.println(10/0);
+    }
+    catch(Exception e){
+        System.out.println("hii");
+    }
+    catch(ArithmeticException a){
+        System.out.println("bye");
+    }
+}
+
+Output:- Unreachable code as the exception is handled by the exception first then the child is handled.
+
+Finally block is a block which will be executed irrespective of whether an exception rises or not or whether an exception is being handled or not.
+
+No matter what finally block will be executed.
+
+Case 1:-If no exception rises.
+
+public static void main(String args[]){
+    try{
+        System.out.println("hii");
+    }
+    catch(Exception e){
+        System.out.println("catch");
+    }
+    finally{
+        System.out.println("finally");
+    }
+}
+
+Output:- hii finally
+
+Case 2:-If an exception rises & handled.
+
+public static void main(String args[]){
+    try{
+        System.out.println("try");
+        System.out.println(10/0);
+    }
+    catch(Exception e){
+        System.out.println("catch");
+    }
+    finally{
+        System.out.println("finally");
+    }
+}
+
+Output:- try catch finally.
+
+Case 3:-If an exception rises but not handled
+
+public static void main(String args[]){
+    try{
+        System.out.println("try");
+        System.out.println(10/0);
+    }catch(NullPointerException n){
+        System.out.println("catch");
+    }
+    finally{
+        System.out.println("finally");
+    }
+}
+
+Output:- try finally exception
+
+Return vs Finally
+-----------------

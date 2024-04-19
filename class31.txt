@@ -1,0 +1,87 @@
+Difference between our calling of the finalize() method and garbage collectors.
+
+We can call finalize() explicitly but useless objects are not destroyed.
+
+When we call the finalize() useless objects are not destroyed, it is only destroyed when garbage collector calls finalize().
+
+package com.aaa;
+public class Test{
+    public static void main(String args[]){
+        Test t = new Test();
+        t.finalize();
+        t.finalize();
+        t=null;
+        System.gc();
+        System.out.println("end of main);
+    }
+
+    public void finalize(){
+        System.out.println("finalize method called.);
+    }
+}
+
+java.lang.String class
+----------------------
+It is a sequence of characters and represented by " " ...
+It is a pre defined class name present in java.lang.package.
+To perform any String operation java has provided us with the following classes 
+
+1.String class
+2.StringBuffer class
+3.StringBuilder class.
+
+String s1 = new String("abc");
+s1.concat("def");
+System.out.println(s1);//abc because string is immutable whose state cant be changed.
+
+String class all objects are immutable .
+
+If we are trying to make any changes then a new object will be created with that changes and it will have no reference variable.
+
+In String class the equals method is overriden to compare the content.
+
+String s = new String("abc");
+String s1 = new String("abc");
+System.out.println(s.equals(s1));//true coz of content comparision not reference comparision
+
+There are 2 ways to create an object of a string class.
+1.with the help of new keyword.
+2.with the help of String literals or appostrophie.
+
+scp:- String Constant Pool
+--------------------------
+
+1) When we create an object using the new keyword then 2 objects is created 1 in the heap and another in scp area  but reference will be pointed in the heap area.
+
+2) When we create an object using the string literals then only 1 object is created and the reference is pointed to the object which is presented in the scp area.
+
+Garbage collector cant destroy the useless objects present inside scp area bcoz it is restricted only to heap area .Scp area objects will be destroyed when jvm shutsdown automatically.
+
+In scp only one object is allowed here objects are checked on the basis of the content.So if we create another object in the scp area then it is not allowed.
+
+String s1 = new String("abc");
+String s2 = new String("abc");
+String s3="abc";
+String s4="abc";
+
+only 3 objects will be created and since scp allows only one object so only one is created first and then s3 and s4 will be pointing to the same object.
+
+Object creation in scp area is optional before creating any new object in scp area first jvm goes to scp area and checks whether an object with the same content is present or not , if present no new object will be created if not then only a new object will be created.
+
+package com.aaa;
+public class Test{
+    public static void main(String args[]){
+        String s1= new String("spring");
+        s1.concat("fall");
+        s1+="winter";
+        String s2=s1
+    }
+}
+
+//spring winter springwinter summer.
+
+Clone method
+-------------
+Clone method is used to create duplicate of an object .
+A class object can only be duplicated if that class is clonable type means that class should implement Cloneable interface.
+Clone method always throws clone not supported exception 

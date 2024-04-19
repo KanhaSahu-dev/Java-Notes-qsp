@@ -1,0 +1,38 @@
+Non static variable memory is allocated at the time of the object creation
+
+Since the non static variable is not created at the heap area then when the main classs calls the non static variable the compiler cant find so there will be error.
+
+for every object there is a separate copy of non static variables
+
+Static variables 
+
+ If the value of the variable doesnt vary from object to object such type of variable isknown as static variable
+It is declared inside a class but outside mehod with static keyword                                                                         
+
+Accessing static variables 
+We can access static variable directly within a class , we can also access static variable with the help of object 
+
+The only recommended way to access static variables is with the help of class names.
+
+It is not mandatory to initialise static variable , if we are not initialising then jvm will provide default provide values 
+static variables are stored in method area or class area.
+
+Static variable memory is allocated at the time of class loading 
+
+There is only one copy of static variable which will be shared by each and every object.
+
+in static variable any changes will be affected by others whereas for non static object they have their own changes.
+
+The above explanation is a static variables can be changed and this change will reflect on others whereas for non static variables if we change a copy of the variable the change will remain in only the object and will not be affected e.g., static students and blackboard non static students and their own copy.
+
+The static and non static variable names cant be same .
+
+Local variable 
+
+It is a temporary variable it is declared inside a method , block or constructor .
+
+We can access local variable directly 
+
+It is mandatory to initialise the local variable when the local variable is used otherwise if not used in the program then dont initialise.
+
+The scope of local variable is within a method in which it has been declared , if we try to access outside the method we will get compile time error saying cannot find symbol .That is we have to access that variable only in the same method.

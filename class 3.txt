@@ -1,0 +1,40 @@
+byte b = 10;
+b++;
+sopln(b); // 11
+
+byte b = 10;
+b = b + 1;
+sopln(b); // error coz cant convert the int to byte automatically.
+
+b++ means b = (byte)(b+1); not b = b + 1;
+
+Arithmatic operator
+
++-*/%
+
+String Concatenation
+
+If we are using + operator between 2 operands where one of where one of the operands of the type string then as a result both operands will merge with each other .
+
+abc102030
+10abc2030
+30abc30
+60abc
+
++ operator is the only overloaded operator in java bcoz in some case it acts as an addition operator and in other case it acts as a concatenation operator. 
+
+If we are using any arithmetic operator between 2 variables x and y then the resultant type will always be max(int , type of x, type of y).
+
+e.g., b=b+1 (byte = b) then max(int , byte , int) so the final answer will be int thus this results in an error.
+
+b->s->(i or ch)->l->f->d
+
+Relational Operator
+
+Relational Operator is used to compare  the values not the types. e.g., 'a' > 97.0 // false
+It is applicable for every primitive data type except boolean values. e.g., true > false // Compilation Error.
+
+When used in comparing strings the answer is compilation error.
+
+Relational Operator is not used in comparing non primitive operators or strings.
+

@@ -1,0 +1,138 @@
+Limitation of Enumeration:-
+----------------------------
+Enumeration can be used to fetch one by one from the legacy class only.
+In enumeration we can perform only one activity that is read only operation and we cant perform operation like remove operation, this iterator come into concept.
+
+Iterator
+--------
+By using iterator we can get object one by one from any collections implemented class object.
+
+In iterator we can perform remove() operation too.
+
+It is known as the universal cursor.
+
+By using the below the format we can get object one by one from any collections implemented class object.
+
+Syntax:-
+--------
+public Iterator iterator();
+
+ArrayList l = new ArrayList();
+Iterator i = l.iterator();
+
+Methods:-
+----------
+1.public boolean hasNext();
+2.public Object next();
+public void remove();
+
+Limitations of Iterator 
+-----------------------
+By using iterator we can get , remove the objects but we cant perform the operations like add or replace for this list iterator came into the concept.
+
+*Both enumeration and iterator are unidirectional cursor which means it can only move in forward direction.
+
+List iterator 
+-------------
+It is the child interface of iterator 
+If we want to get object one by one from any list interface implemented class then we can go for list iterator.
+It is only applicable for list interface.
+This cursor is known as bidirectional cursor which means it can move in both forward as well as backward direction.
+If we want to get object one by one by using list iterator then we will use the below format.
+
+Syntax:-
+---------
+public ListIterator ListIterator();
+ArrayList l = new ArrayList();
+ListIterator i = l.listIterator();
+
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class A{
+    public static void main(String args[]){
+        ArrayList l = new ArrayList();
+        for(int i = 10;i<=20;i++){
+            l.add(i);
+        }
+        System.out.println(l);
+        ListIterator i = l.listIterator();
+        while(i.hasNext()){
+            Integer a = (Integer)i.next();
+            if(a==10||a==15){
+                i.set("Champa");
+            }
+            else if (a==16){
+                i.add("Chameli");
+            }
+        }
+        System.out.println(l);
+    }
+}
+
+
+
+Methods:-
+---------
+1.public boolean hasNext();
+2.public Object next();
+3.public boolean hasPrevious():
+4.public Object hasPrevious();
+5.public void remove();
+6.public void set(Object o);
+7.public void add(Object new);
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class A{
+    public static void main(String args[]){
+        ArrayList l = new ArrayList();
+        for(int i = 10;i<=20;i++){
+            l.add(i);
+        }
+        System.out.println(l);
+        ListIterator i = l.listIterator();
+        while(i.hasNext()){
+            Integer a = (Integer)i.next();
+            System.out.println(a);
+        }
+        System.out.println(l);
+        while(i.hasPrevious()){
+            Integer b = (Integer)i.previous();
+            System.out.println(b);
+        }
+    }
+}
+
+Set interface
+-------------
+If we want to represent a group of individual object as a single entity where duplicates are not allowed and insertion order not preserved then we will go for set interface.
+
+*Duplicates are not allowed.
+*Insertion order are not preserved.
+
+hasSet()
+--------
+*The underlying data structure is hash table .
+*Duplicates are not allowed.
+*Insertion order are not preserved.
+*Heterogenous elements can be inserted.
+*Null insertion is possible but only once.
+
+*If we try to insert duplicate elements then we will not get any knd of compile time error or Runtime Exception.
+Set don't have any methods it will use the methods of Collection interface.
+
+Constructors:-
+1.HashSet h = new HashSet();
+*It will creates empty HashSet object with default initial capacity of 16 and default fill ratio of 0.75 .
+
+2.HashSet h = new HashSet(int initialCapacity);
+*It will create an empty HashSet object with the given capacity and fill ratio of 0.75.
+
+3.HashSet h = new HashSet(int initialCapacity,float fillRatio);
+
+4.HashSet h = new HashSet(Collection c);
+*It will create or establish a relationship between HashSet and other Collection class.
+

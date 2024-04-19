@@ -1,0 +1,100 @@
+To know relation between two classes :-
+We can use the operator instanceof
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.RandomAccess;
+
+public class class41 {
+    public static void main(String[] args) {
+        ArrayList l = new ArrayList();
+        System.out.println(l instanceof Serializable);
+        System.out.println(l instanceof Cloneable);
+        System.out.println(l instanceof RandomAccess);
+    }
+}
+
+Every method present inside arrayList is non synchronized 
+Getting the synchronized version of ArrayList 
+=========================================================
+Collections class defines the following methods to make ArrayList synchronized
+
+~public static void main(List l);
+Collection is an interface.
+Collections is a class.
+
+To make an ArrayList synchronized we can do like this
+
+ArrayList l = new ArrayList();
+List l1 = Colections.synchronizedList(l);
+
+l-->non synchronized
+l1-->synchronized.
+
+What is the difference between Collection and Collections???
+
+Collection is an interface.
+Collections is a class.
+
+ArrayList is the "best choice" if our frequent operation is retrieval operation.
+
+It is the "worst choice" if our frequent operation is insertion or deletion because of internal shifting.
+
+To overcome the drawbacks of ArrayList LinkedList came into picture 
+
+LinkedList
+----------
+-The underlying data structure is double Linked List.
+-If our frequent operation is insertion or deletion from middle then LinkedList is the best choice
+
+-If our frequent operation is retueval operationn then it is the worst choice.
+-Duplicates are allowed
+-Insertion order is preserved
+-Null insertion is possible
+-It implements Serializable , Cloneable, RandomAccess.
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.RandomAccess;
+
+class Node{
+    int value;
+    Node next;
+    
+}
+class class41{
+    Node head;
+    Node tail=null;
+    int size;
+    void createLL(int data){
+        Node node = new Node();
+        if(head==null)
+        head=node;
+        node.value=data;
+        node.next=null;
+        tail=node;
+        size=1;
+    }
+    public static void main(String[] args) {
+        class41 ob = new class41();
+        ob.createLL(1);
+    }
+}
+
+
+
+
+LinkedList methods
+------------------
+It implements Serializable , Cloneable but not RandomAccess
+
+LinkedList methods
+------------------
+1.void addFirst(Object o)
+2.void addLast(Object o);
+3.Object getFirst();
+4.Object getLast();
+5.Object removeFirst();
+6.Object removeLast();
+
+Note: We can apply these methods on LinkedList only.

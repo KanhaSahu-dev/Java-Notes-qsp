@@ -1,0 +1,22 @@
+Vector
+------
+The underlying data structure is resizeable array
+
+Duplicates are allowed
+
+Insertion order is preserved
+
+Heterogeneous elements are allowed
+
+Null insertion is possible
+
+Implements Serializable, Cloneable and RandomAccess
+
+Note:Every method present inside Vector is synchronised.
+
+Constructor
+===========
+Vector v = new Vector();
+default capacity=10;
+
+new capacity = initial capacity*2;

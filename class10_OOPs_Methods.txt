@@ -1,0 +1,108 @@
+OOPS
+-----
+
+METHODS :-
+
+Method is the set or block of codes which is used to perform a particular task.
+	modifiers return-type methodName(parameter/arguments){ body }
+
+MethodName
+Method name always starts with lower case e.g., main(),concat(),append().
+If a method name contains more than one word then method name always starts with lower case but every inner word should start with upper case . This is called as camel's rule.
+
+There are only 2 types of methods in java
+1.Static method 
+2.Non Static method 
+
+Static method which is represented by static modifier is known as static method.
+A method which is not delclared as static is known as non static method.
+
+Main method starts with main method and ends with main method.
+
+If we want to execute the codes present inside m1 method present inside m1 method then we need to call the method .
+
+Calling a method 
+----------------
+
+Calling a method means go to that method , execute the codes present inside that methods and come back.
+
+Calling a static method :-
+We can call static method by the following ways    directly,    by object,   by class name.
+
+Calling a non static method :-
+We can call non static method by the object.
+
+
+Method Argument
+-----------------
+
+It is just like an input to a method
+Argument of a method is optional.
+There are 2 types of method argument
+1. Primitive data type
+
+public vodi m1(int x){
+
+}
+
+2. Non primitive data type
+
+public void m1(String x){}
+
+Calling a method with primitive datatype
+
+p s v m (___){
+m1(10);
+m2(10.5);
+m3(true);}}
+
+Calling a method with non primitive as an argument
+------------------------------------------------
+We can call a method with non primitive as an argument by the following 2 ways:-
+	1) By passing  object of the same type as an argument .
+	2) By passing null as an argument.
+class B{
+	p s v m(...){
+	{
+	sopln("hii");
+}
+p s v m(---){
+m1("abc");
+m1(new String());
+m1(null);
+}
+}
+
+}
+
+class Test{
+p s v m1(Test t){
+	sopln("hii");
+}
+p s v m(--){
+m1(new Test());
+m1(null);
+}
+
+
+}
+
+
+Return type of a method
+-----------------------
+
+It is just like an output to a method .There are 3 types of return types 1.void 2.primitive 3.non primitive.
+If a method has return type as void then it does not any value when called .
+Main method is static bcoz the jvm doesnt need to make an object.
+
+Primitive return type 
+-------------------
+If a method has any return type except void then it is mandatory to write a return statement inside that method .
+if return statement is absent then the error will called as missing return statement.
+p s v m(int x){
+sop("hii");
+}
+p s v m(___){
+m(10);//hii
+}
+

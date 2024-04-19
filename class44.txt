@@ -1,0 +1,95 @@
+In Stack offset numbering is done by top to bottom.
+In Stack index numbering is from Bottom to Top.
+LIFO works in offset numbering.
+
+import java.util.Stack;
+
+public class class44 {
+    public static void main(String[] args) {
+        Stack s = new Stack();
+        System.out.println(s.empty());
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        s.push(5);
+        s.push(6);
+        s.push(7);
+        System.out.println(s);
+        System.out.println(s.empty());
+        System.out.println(s);
+        System.out.println(s.pop());
+        System.out.println(s);
+        System.out.println(s.peek());
+    }
+}
+
+Cursors Of java
+---------------
+There are 3 cusors present in java.
+1.Enumeration
+2.Iterator
+3.ListIterator
+
+Q)Why we will use cursors?
+A)If we want to get object one by one from any Collection's implemented class then we will go for CURSORS of JAVA.
+
+*These all are interfaces.
+
+Enumeration
+------------
+If we want to get object one by one from any Legacy class (Vector,Stack) then we will go Enumeration.
+
+Declaration of elements():-
+---------------------------
+public Enumeration elements();
+Enumeration e = v.elements();
+
+elements() method is like a factory method where when called will return the object of the implemented class which called.It is stored in the interface.
+
+Methods of Enumeration:-
+-------------------------
+It have only 2 methods which are :-
+a.public boolean hasMoreElement();
+b.public Objet nextElement();
+
+nextElement() does 2 things where fetch the present element and sends the cursor to the next one .And the hasMoreElement checks if that present idnex has the element if it is then nextElement fetches the value and sends the cursor to the next one.
+
+hasMoreElement and elements() are in a cycle.
+
+Enumeration e = v.elements();
+
+Integer i = (Integer)e.nextElement;
+
+When thenextElement() fetches the value then jvm gives the value a Object type and since we  need to go some process so we need to type cast it to the Integer or any other types that we need.
+
+Example:-
+import java.util.Enumeration;
+import java.util.Vector;
+
+
+public class class44 {
+    public static void main(String[] args) {
+        Vector v = new Vector();
+        for(int i = 1;i<=10;i++){
+            v.add(i);
+        }
+        System.out.println(v);
+        Enumeration e = v.elements();
+        while(e.hasMoreElements()){
+            Integer i = (Integer)e.nextElement();
+            if(i%2==0)
+            System.out.println(i);
+        }
+    }
+}
+OUTPUT:-
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2
+4
+6
+8
+10
+
+Here hasMoreElement() checks and nextElement() moves the cursor to the next one.
+

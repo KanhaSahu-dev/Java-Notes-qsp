@@ -1,0 +1,12 @@
+Modifiers
+
+Modifiers are the reserved keywords using which a programmer can decide accessing area or fucntionalities .
+There are two types of modifiers . 1) Access 2) Non Access modifier.
+
+Access :- public protected default private.
+
+Public 
+It is a access modifier which is applicable for class methods and variables.
+If a class is public then we can access it within the package and outside the package too but we have to make sure that we must import the class.
+If a method is public then we can access it within the class and outside the class within the package , outside the package too.
+If a variable is public then we can access it within the class , outside the class , within the package and outside the package too.

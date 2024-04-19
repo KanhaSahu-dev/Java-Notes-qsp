@@ -1,0 +1,108 @@
+package com.zeeshan1;
+public class Test implements Cloneable{
+    int x = 10;
+    public static void main(String args[])  throws CloneNotSupportedException{
+        Test t=new Test();
+        System.out.println(t.x);
+        Test t1 = (Test)t.clone();
+        System.out.println(t1.x);
+        boolean y = t==t1?true:false;
+        System.out.println(y);
+    }
+}
+
+String class constructor
+========================
+1. String s = new String();
+2. String s = new String(String literals);
+e.g., String s = new String("abc");
+3. String s = new String(StringBuffer sb);
+char[] ch = {'a','b','c'};
+4. String s = new String(char[] ch);
+byte[] b = new(100,101,102);
+5. String s = new String(b)//def
+
+Methods of String class
+========================
+1.public char charAt(int index){}//It returns the charater present at specified index.
+e.g.,
+class class32{
+    public static void main(String[] args) {
+        String s = "abcdef";
+        System.out.println(s.charAt(4));
+    }
+}
+
+2. public String concat(String s);
+
+3.public boolean equals(Object o);
+4.public boolean equalsIgnoreCase(String s);
+e.g.,
+class class32{
+    public static void main(String[] args) {
+        String s = "abc";
+        System.out.println(s.equalsIgnoreCase("ABC"));//true
+    }
+}
+
+5.public String substring(int begin);//begin is always included.
+6.public String substring(int begin,int end);//end one is excluded
+e.g.,
+String s = "abcdef";
+System.out.println(s.substring(2));//cdef
+System.out.println(s.substring(2,5));//cde
+System.out.println(s.substring(2,10));//ERROR
+System.out.println(s.substring(2,2));//empty
+
+7.public int length();
+
+class class32{
+    public static void main(String[] args) {
+        String s = "abc";
+        System.out.println(s.length());
+    }
+}
+
+8.public String replace(char old,char new);
+class class32{
+    public static void main(String[] args) {
+        String s = "abcdefghi";
+        System.out.println(s.replace("ab","12"));
+    }
+}
+
+9.public String toLowerCase();
+10.public String toUpperCase();
+
+11.public String trim();
+--> It removes the blank space from teh beginning and from the end but not from the middle.
+
+class class32{
+    public static void main(String[] args) {
+        String s = "    ab  cd    ";
+        System.out.println(s.trim());
+    }
+}
+
+12. public int indexOf(char ch);
+returns the index of the specified character.
+String s="abcdeaf";
+
+System.out.println(s.indexOf("d"));
+
+System.out.println(s.indexOf("z"));
+
+System.out.println(s.lastIndexOf('a'));
+
+System.out.println(s.indexOf("cd"));
+
+System.out.println(s.indexOf('c','d'));
+
+System.out.println(s.lastIndexOf('a', 4));
+System.out.println(s.lastIndexOf('b', 4));
+System.out.println(s.lastIndexOf('a', 7));
+System.out.println(s.lastIndexOf('c', 0));
+
+compareTo()
+System.out.println(s1.compareTo(s2));// s1-s2(ascii values)
+System.out.println("a".compareTo("A"));//"a" - "A"

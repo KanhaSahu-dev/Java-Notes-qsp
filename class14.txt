@@ -1,0 +1,37 @@
+Method Overriding
+-----------------
+
+Changing the inplementation of parent class method in child class according to the requirement of child class is known as method overriding.
+
+public void m1(int x)	---> declaration
+{...}		--->implementation.
+
+class pop{
+public void m1(){
+sopln("sweet");
+}
+}
+
+class mop extends pop{
+public void m1(){
+sopln("spicy");
+}
+}
+
+Overriding is on the basis of runtime object.
+Mostly in java we are checking reference type method call but only in the case of overriding we check runtime object.
+
+Rules for overriding
+-------------------
+Method signature must be same , signature include method name and the method type.
+We can change the return type of a method overriding, from 1.5v onwards co variant concept came into picture.
+co variant concept is not applicable for primitive datatypes.
+Co variant concept is applicable for non primitive datatypes with some restrictions:-
+	Parent class method return type should be parent class type . e.g.,
+
+	public Object m1(){}
+
+	public String m1(){}
+
+
+

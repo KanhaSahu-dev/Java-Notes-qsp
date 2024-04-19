@@ -1,0 +1,57 @@
+Non static and local variable name can be same 
+
+e.g.,
+class A{
+int x = 10;
+psvm(---){
+int x = 20;
+sopln(x); // 20 bcoz it is the immediate member.
+
+A a = new A();
+sopln(a.x);
+}
+}
+
+Local variable and static variable name can be same 
+
+class A{
+static int x = 10;
+psvm(---){
+int x = 20;
+sopln(x); // 20 bcoz it is the immediate member.
+
+A a = new A();
+sopln(a.x);
+}
+}
+
+To know whether different types of variables can be of the same names we should check the access methods
+
+Three types of operators are there which are unary binary and ternary.
+operands a,b,c
+operators +-/* .
+
+pre inc = increment by 1 happens before the operation
+post inc = increment by 1 happens after the operation
+
+Unary operator is applicable for every primitive data types except boolean.
+
+byte b = 10;
+b++;
+sopln(b);
+
+int x = 10
+x++;
+sopln(x);
+
+double d = 10.5;
+d++;
+sopln(d); 11.5
+
+char x = 'a';
+x++;
+sopln(x); b
+
+boolean b= false;
+x++;
+sopln(x); CE

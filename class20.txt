@@ -1,0 +1,120 @@
+Constructor Overloading
+-----------------------
+Creating multiple constructors with same name but different arguments is known as constructor overloading.
+e.g.,
+class a{
+ a(){
+sopln("no arg");}
+a(int x){
+sopln("int arg");
+}
+a(double d){
+sopln("double arg");
+}
+}
+
+The costliest creation in the entire java is the object creation. fun facts.
+Constructor chaining:- calling a constructor from another constructor.
+Calling one constructor from another constructor is known as constructor chaining.
+We can achieve constructor chaining by using this() or super() method.
+
+class a{
+ a(){
+sopln("no arg");}
+a(int x){
+sopln("int arg");
+}
+a(double d){
+sopln("double arg");
+}
+
+psvm(){
+new a();//no arg
+new a(10);//int arg
+
+}
+}
+
+class A{
+    A(){
+        System.out.println("parent const");
+    }
+}
+class class20 extends A{
+    class20(){
+        
+        System.out.println("child const");
+    }
+    public static void main(String[] args) {
+        new class20();
+    }
+}
+
+Can we override constructor?
+No we cant override a constructor neither we can inherit it because the compiler treats the overridden constructor as a method but since it doesnt have any return type thus it shows CE.
+
+class a{
+a(int a){
+
+}
+}
+
+class b extends a{
+b(){}	// will show compilation error coz by default super() is there so super doesnt have any argument while the parent class has one 
+}
+
+So basically when we declare a constructor there the default constructor get erased.
+
+Multiple constructors are not allowed as the super() inside the child class will gets confused which parent to call.
+
+e.g.,
+class class20{
+    String name;
+    public static void main(String[] args) {
+        class20 o = new class20();
+        class20 b = new class20();
+        System.out.println(o.name);//null
+        System.out.println(b.name);//null
+    }
+}
+
+Proving that constructors are not needed when initialising the objects.
+
+class class20{
+    String name;
+    public static void main(String[] args) {
+        class20 o = new class20();
+        class20 b = new class20();
+	o.name = "abc";
+	b.name = "xyz";
+        System.out.println(o.name);//abc
+        System.out.println(b.name);//xyz
+    }
+}
+
+Main use of constructors is that we dont have to update again and again the non static variables we can simply write in the constructors.
+
+for e.g.,
+class class20{
+    String name;
+	class20(String name1){
+	name = name1;
+}
+
+
+
+    public static void main(String[] args) {
+        class20 o = new class20("abc");
+        class20 b = new class20("xyz");
+	o.name = "abc";
+	b.name = "xyz";
+        System.out.println(o.name);//abc
+        System.out.println(b.name);//xyz
+    }
+}
+
+
+
+
+
+

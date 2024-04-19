@@ -1,0 +1,44 @@
+The line which is not being executed and we get to know that it is an exception it is a checked exception
+
+The line which has an exception and we know after the execution it is known as unchecked exception
+
+We should try to write the exact exception other wise the time complexity increases with the normal Exception class.
+
+Finally block is a block which will be executed to perform code clean up activity.
+
+Throws() keyword
+-----------------
+It is the second way of handling the exception .
+Throws keyword can only handle checked exception .
+
+class demo{
+    public static void main(String args[]) throws InterruptedException{
+        Thread.sleep(3000);
+    }
+}
+
+Unchecked Exception
+-------------------
+throws cant handle unchecked exception
+class demo{
+    public static void main(String args[]) throws ArithmeticException{
+        System.out.println(10/0);
+    }
+}
+//cle
+
+If we want to use our user defined class as a exception class then we have to make our user defined class as the child class of Throwable or it's type.
+
+class demo extends Exception{
+    public static void main(String args[]) throws Demo{
+        System.out.println(10/0);
+    }
+}
+
+Throw keyword
+-------------
+class demo extends ArithmeticException{
+    public static void main(String args[]) throws ArithmeticException{
+        throw new Demo();
+    }
+}

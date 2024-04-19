@@ -1,0 +1,78 @@
+If return statement is present inside try catch and finally block then priority will be given to finally block .
+Before the execution of returns statement present inside try block , first it goes to finally block and then comes back.
+
+N.B.
+---
+If a method is going to return it first checks whether a finally block is there if it is then it will be executed then the return will happen .
+
+public class class37 {
+    public static void main(String[] args) {
+        try{
+            System.out.println("try");
+            System.out.println(10/0);
+        }
+        catch(NullPointerException e){
+            System.out.println("catch");
+        }finally{
+            System.out.println("finally");
+        }
+    }
+}
+
+There is only one situation where finally block wont be executed that is whenever we are using System.exit(0);
+
+e.g.,
+public class class37 {
+    public static void main(String[] args) {
+        try{
+            System.out.println("try");
+            System.out.println(10/0);
+        }
+        catch(Exception e){
+            System.out.println("catch");
+            System.exit(0);
+        }finally{
+            System.out.println("finally");
+        }
+    }
+}
+
+We can write a number within the range of int outside of it will result in an error.
+
+final vs finally vs finalize()
+==============================
+final is a modifier which is applicable for variables , methods and classes 
+If a variable is declared as final then we cant change the value of that variable
+If a method is declared as final then we cant override that method
+If a class is declared as final then we cant inherit it....
+
+--->finally is a block which is always assosiated with try block and it will be executed irrespective of whether an exception is rising or not, whether exception is being handled or not.
+
+--->finalize() is a method which is always invoked by garbage collector to perform clean up activites.
+
+throw() keyword
+--------------
+It is used to create exception object intentionally .
+e.g.,
+public class class37 {
+    public static void main(String[] args) {
+        throw new ArithmeticException("helo boi");
+    }
+}
+
+1.It is used to create customised Exception object .
+2.It is used to handover our exception object to JVM.
+
+Q. Why created the exception object?
+
+class A{
+    static AE e;
+    public static void main(String args[]){
+        throw e;//NullPointerException
+    }
+}
+
+Reason is bcoz e is static and non primitive it's default value is null thus resulting in null pointer exception whenever throw is done .
+
+
+

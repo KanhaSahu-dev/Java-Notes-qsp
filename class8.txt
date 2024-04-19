@@ -1,0 +1,36 @@
+TYPE CASTING
+-------------
+
+Type casting is the process of converting one type of data value into another type of data type.
+It is other wise known as primitive type casting. 
+
+This process of conversion is applicable for all the primitive data types except Boolean .
+
+Types of type casting:-
+	Implicit type casting
+	Excplicit type casting
+
+Implicit type casting
+------------------
+Whenever we are storing smaller data value into a bigger data type then that process is known as implicit type casting .
+
+int x = 100;sopln(x);//100
+double y = x;
+sopln(y);//100.0
+
+char can only be converted into int not of any type except int. The main reason is character types are stored in ascii values and ascii values are of int type so char can only be converted to int type.
+
+by default any number is of int type .
+
+* implicit type casting will be done automatically  by the compiler . 
+* there will be no loss of data .
+* the other names for implicit type casting are :- upcasting, widening 
+
+b s i l f d
+     c		
+
+char x='a';
+sopln(x);
+double d=x;
+sopln(d);
+

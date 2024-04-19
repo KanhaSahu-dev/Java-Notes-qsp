@@ -1,0 +1,79 @@
+Inheritance
+----------
+Acquiring one class properties to another class is known as inheritance.
+Where properties means variables and methods .
+
+This process involves minimum 2 classes
+
+1)Parent class / super class / base class
+2)Child Class / derived class / sub class
+
+1)The class whose properites is acquired is known as parent class.
+2)The class who acquired the properties is known as child class.
+Inheritance is represented by "extends" keyword.
+
+
+
+
+Object class is the supermost class in the java means every class in java extends object class either directly or indirectly .
+
+If a class does not extend any other class then that class is said to be direct child of object class.
+
+If a class  extends any other class then that class is said to be indirect child of object class.
+
+class A{ --> direct child of obect class
+}
+
+Types of inheritances:-
+
+1. Single inheritance
+2. Multi-level inheritance
+3. Multiple inheritance
+4. Heirarchial inheritance
+5. Hybrid inheritance
+
+Single inheritance:-
+Inheritance where one class extends another class.
+
+Multi-level inheritance
+Where one class extends another which also extends another class.
+
+Multiple inheritance
+Where one class extends more than one class.
+
+Heirarchial inheritance
+Where 2 or more classes extends from the same parent class.
+
+Hybrid inheritance
+This is a combination of all the above classes.
+
+Multiple inheritance
+When one class extends more than one class then that type of inheritance is known as multiple inheritance.
+
+class A{} class B{}
+
+class C extends A,B{}
+
+Here C is a child class and this is also called as multiple inheritance.
+
+It is not allowed in JAVA because of <Diamond problem> .
+
+Cyclic Inherirance is not allowed like a class extending another and the other class is extending the first class
+
+
+The main advantage of inheritance is code reusability.
+We can use code reusability multiple times like giving a funtionality multiple times to more than one app just by declaring once inside one class and extending to another class.
+
+Method overloading
+------------------
+Creating multiple methods having same name but different arguments is called as method overloading.
+
+e.g.,
+
+m1()
+m1(int x)
+m1(double x)
+m1(String y)
+
+In method overloading 
+

@@ -1,0 +1,77 @@
+If we want to represent a group of individual objects as a single entity where duplicates are allowed and insertion order is preserved then we should go for List.
+
+The order in which elements are inserted in the same order we will get output 
+
+Duplicate elements can be differentiatied with respect  to index 
+
+Insertion Order is also preserved with repect to index
+Hence, index plays an important role.
+
+List is the child interface of Collection 
+List interface Methods
+======================
+1.boolean add(int index,Object o);
+to add an element at specified index
+It pushes left elements to right.
+
+2.boolean addAll(int index,Collection c);
+
+3.Object get(int index);
+
+retrieves the element present at the specified index.
+
+4.Object remove(int index);
+removes the element at the given index.
+
+5.Object set(int index,Object new);
+replaces the element by new object
+
+6.int indexOf(Object o);
+returns the index of an object
+
+
+import java.util.ArrayList;
+
+public class class40 {
+    public static void main(String[] args) {
+        ArrayList a = new ArrayList();
+        a.add(10);
+        a.add("aaa");
+        a.add("bbb");
+        a.add("ccc");
+        a.add("ddd");
+        a.add("eee");
+        System.out.println(a.get(1));
+        a.remove(2);
+        System.out.println(a);
+        a.set(1,"zzz");
+        System.out.println(a);
+        System.out.println(a.get(2));
+    }
+}
+
+
+LIstIterator listIterator();  --->cursor
+
+ArrayList
+---------
+The underlying data structure is resizeable array or growable array.
+Duplicates are allowed.
+Insertion order is preserved.
+Heterogenous elements are allowed.
+Null insertion is possible.
+It implements Serializable,Cloneable and RandomAccess interface.
+
+Constructor
+-----------
+1)ArrayList l = new ArrayList();
+Whenever we write like this by default 10 memory is allocated.
+
+If we try to add one more element then New capacity = (initial capacity*3/2)+1 so 16.
+Then a new ArrayList is created and all the elements are being copied to the new one.
+Then the old one gets deleted.
+
+2)ArrayList l = new ArrayList(int initialCap);
+ArrayList l = new ArrayList(25);
+
+3)ArrayList l = new ArrayList(Collection c);

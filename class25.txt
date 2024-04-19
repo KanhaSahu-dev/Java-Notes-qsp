@@ -1,0 +1,58 @@
+Running the java files without the main method
+Constructor calling and object assigning outside the method 
+Instance method calling by making object static outside the method
+
+OBJECT TYPECASTING
+---------------------	
+Converting from one type of object to another type of object is known as object type casting.
+Parent class reference can be used to hold its child class object also known as UPCASTING
+Runnable r = new Thread();
+Interface reference an be used to hold it's implementation class object.:- UPCASTING
+
+Object o = new String("abc");
+StringBuffer sb = (StringBuffer)o;
+A b = () d;
+A->class name / interface name
+B->object reference
+C->class name
+D->object reference.
+
+Step 1:-
+Compile time checking 1
+-----------------------
+There must be some relation betwen c and d otherwise we will get CE saying incompatible types.
+Object o = new String("abc");
+StringBuffer sb = (StringBuffer)o;//NO ERROR
+
+String o = new String("abc");
+StringBuffer sb = (StringBuffer)o;//ERROR
+
+Step 2: Compie time Checking
+----------------------------
+'c' must be either same as a or child class of a otherwise we will get CE saing incompatible types.
+Object o = new String("abc");
+StringBuffer sb = (StringBuffer)o;//NO ERROR
+
+String o = new String("abc");
+StringBuffer sb = (StringBuffer)o;//ERROR
+
+Step 3: Runtime checking
+------------------------
+Runtime object of 'd' must be either same or child class of 'c' otherwise we will get RUNTIME EXCEPTION saying ClassCastException.
+Object o = new String("abc");
+StringBuffer sb = (StringBuffer)o;//ERROR
+
+Example where all the 3 steps are checked
+
+Integer I = new Integer(10);
+Number n  = (Number)I;
+
+Q: While object type casting whether  a new object is created or not.
+
+No new object is created and the existing object gets a new reference during object typecasting.
+
+
+
+
+
+

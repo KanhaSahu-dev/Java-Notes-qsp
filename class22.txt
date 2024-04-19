@@ -1,0 +1,180 @@
+Interface
+--------
+It is a media betweeen user and device 
+One class extends another class.
+class a extends b{
+
+}
+--> one class implements another interface.
+
+class a implements{}
+
+--> One interface extends another interface
+Interface I1 extends I2
+
+--> One class cant extends more than one class.
+
+--> One class can implements any number of interfaces
+
+class a implements i1,i2,i3{
+
+}
+
+One class can extends another class and can implement any no of interfaces simultaneously.
+
+class a extends b implements i1,i2,i3{
+}
+
+--> We cant create object of  interface.
+
+Interface Variables
+------------------
+All the variables present inside interface are by default public , static and final.
+
+public: We can access it from anywhere
+
+final: We can't change the value of variable
+
+→ static It can't be non static because we can't create object of interface
+
+→It can't be local because variables of interface is by default public.
+
+Case 1:
+Final variable of interface must be initialised at the time of declaration .
+interface a{
+int x;//error
+}
+
+final variable value cant be changed
+
+Like a class variables can be declared and changed when they are extending like that interfaces can be done as so.
+
+We can access interface variables with the help of interface name.
+
+Interface Methods
+-----------------
+All methods are by default public and abstract.
+all are correct.
+interface a{
+void m1();
+public void m2();
+abstract void m3();
+public abstract void m4();
+}
+
+interface a{
+void m1();
+void m2();
+}
+
+class b implemetns a{
+public void m1(){}
+public void m2(){}
+psvm(){
+B b1 = new B();
+b1.m1();
+b1.m2();
+}
+}
+
+Interface doesnt have constructors.
+
+To overcome the drawbacks of the multiple inheritance interface came into picture.
+
+If two interfaces containing methods with same signature and same return type then in implementation class we need to provide impolementation for only once.
+
+interface a{
+void m1();
+}
+interface b{
+void m1();
+}
+
+class c implements a,b{
+public void m1(){
+sopln("");
+}
+}
+Only one implementation is sufficient for the two interfaces.
+
+If two interfaces containing methods with same return type but different signatures then in implementation class we need to provide implementation for both methods separately and these methods are known as overloaded methods .
+
+interface a{
+void m1();
+}
+
+interface b{
+void m1(int x);
+}
+
+class c implements a,b{
+public void m1(){...}
+public void m1(int x){...}
+}
+
+If two interfaces containing methods with same signatures but different return type then it is impossible to provide implementation.
+
+e.g.,
+interface a{
+    void m1();
+}
+
+interface b{
+    int m1();
+}
+
+abstract class c implements a,b{
+    public void m1(){
+        System.out.println("hii");
+    }
+}
+
+class d extends c{
+    public int m1(){
+        System.out.println("hey");
+    }
+}
+
+From 1.8 version default and static method were allowed inside interface.
+
+We can store child class object in the parent class reference .
+
+
+Static method inside an interface can only be accessed by the interface name not the object calling.
+
+
+In 1.9 version private method has also introduced inside interface
+
+class demo implements a{
+public static void main(String...a){
+demo d = new demo();
+}
+}
+
+interface a{
+private void m1(){
+sopln("private method");
+}
+
+default void m2(){
+this.m1();//private method
+}
+}
+
+class demo implements A,B{
+public void m1(){
+A.super.m1();
+B.super.m1();
+}
+}
+
+interface A{
+default void m1(){sopln("hii");}
+}
+interface B{
+default void m1(){sopln("hii");}
+}
+
+The default keyword is used to indicate a default implementation for a method in the interface. The public modifier, when explicitly used in this context, does not add any new information and can be omitted for clarity.
+
+

@@ -1,0 +1,73 @@
+Without try catch
+
+public class class35 {
+    public static void main(String[] args) {
+        System.out.println(0.0/0);
+    }
+}
+
+Risky code is the code where error may come .
+
+With try catch
+
+public static void main(String args[]){
+    System.out.println("hii");
+    try{
+        System.out.println(10/0);
+    }
+    catch(ArithmeticException e){
+        System.out.println(10/2);
+    }
+    System.out.println("bye");
+}
+Output:-
+hii
+5
+bye
+
+The statement which may arise an exception is known as risky code and this code must be written inside try block.
+Try block doesnt handle the exception , it just highlight the code which may rise an exception .
+Catch block is used to handle the exception 
+Without try block we cant write catch block.
+
+Flow control in try catch 
+
+Note:If there is no exception in try block catch block will be ignored
+
+->If an exception rises in try blcok then rest of try block wont be executed irrespective of whether exception in handled or not.
+
+Case 1:If there is no exception
+o/p:-> 1,2,3,4,5
+
+Case 2:If an exception rises at stmt2 & not handled
+o/p-> 1, exception
+
+Case 3:If an exception rises at stmnt 2 & handled.
+o/p->1,4,5
+
+Case 4:If an exception rises at stmnt -4
+o/p-> 1,2,3,5
+
+public static void main(String args[]){
+    try{
+      statement 1;  
+      statement 2;  
+      statement 3;  
+    }
+    catch(x e){
+        statement 4;
+    }
+    statement 5;
+}
+
+Throwable class provides the following methods to print exception information
+=============================================================================
+
+1.printStackTrace()
+2.toString()
+3.getMessege()
+
+If we call the printStackTrace() method name,description and location.
+By default the exception object calls toString() method and it prints the name:description.
+If we call the getMessege() method it only prints description .
+
