@@ -1,0 +1,53 @@
+What are three cursors explain?
+
+why do we use Enumeration?
+
+what is the difference between Iterator and ListIterator?
+
+what is the difference between Map and HashMap?
+
+What is the difference between set and HashSet?
+
+what is the underlying data structure of linkedHashset?
+
+what are the marker interfaces ?
+
+what is the difference between shallow copy and deep copy?
+
+what is the difference between Collection and Collections ?
+
+What do you mean by utility class?
+
+What is the difference between throw and throws keyword?
+
+Difference between finally and finalize() method?
+
+Explain the workflow of the java code initialisation to the execution ?
+
+What is the benifit of declaring class as final?
+
+What are runtime errors?
+
+types of exceptions and explain them?
+
+what do you mean by exception?
+
+Explain the Runtime Stack Mechanism?
+
+What do you mean by anonymous array?
+
+What is the difference between autoboxing and auto-unboxing explain with example and syntax?
+
+Tell me something about the wrapper class' constructors? (v9 , deprecrated)?
+
+
+
+public static void main(String[] args) {
+        OuterClass outerInstance = new OuterClass();
+        
+        // Can create instance of InnerClass only with instance of OuterClass
+        InnerClass innerInstance = outerInstance.new InnerClass();
+        innerInstance.printOuterField();
+    }
+
+In this example, InnerClass is an inner class of OuterClass. You can only create an instance of InnerClass by using an instance of OuterClass.
