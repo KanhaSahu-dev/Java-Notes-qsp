@@ -40,7 +40,25 @@ What is the difference between autoboxing and auto-unboxing explain with example
 
 Tell me something about the wrapper class' constructors? (v9 , deprecrated)?
 
+Explain about the utility methods?
 
+Difference between String buffer and String builder?
+
+Why should i choose StringBuffer over String?
+
+Why StringBuffer is better than Stringbuilder?
+
+Static methods arent overidden why as making static means we can only call that method by the class name ri8?
+
+Tell me 5 methods of String class?
+
+What does the finalize method does?
+
+What do you mean by island of isolation?
+
+What is the use of toString method?
+
+Which package is automatically imported in every java classes?
 
 public static void main(String[] args) {
         OuterClass outerInstance = new OuterClass();
